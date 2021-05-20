@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+#myCanvas{
+    background-color: crimson;
+    border: 1px dotted black;
+    box-sizing: border-box;
+}
