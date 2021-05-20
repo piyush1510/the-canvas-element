@@ -7,15 +7,15 @@ const w = window.innerWidth;
 const h = window.innerHeight;
 canvas.width = w;
 canvas.height = h;
-const colors = ["#e56a6b", "#ffd6de", "#ffccb0", "#49616d"];
+const colors = ["crimson","pink","gray"];
 
 var mouse = {
   x: w / 2,
   y: h / 2,
 };
 addEventListener("mousemove", (event) => {
-  mouse.x = event.clientX;
-  mouse.y = event.clientY;
+  mouse.x = (event.clientX+20*mouse.x)/21;
+  mouse.y = (event.clientY+20*mouse.y)/21;
 });
 addEventListener("mouseout", (event) => {
   mouse.x = w / 2;
@@ -32,10 +32,10 @@ class Particle {
   constructor() {
     this.y = h / 2;
     this.color = randomColor();
-    this.radius = 5;
+    this.radius = 3;
     this.x = w / 2;
     this.radians = Math.random() * Math.PI * 2;
-    this.velocity = 0.01;
+    this.velocity = 0.02;
     this.ds = 100 * Math.random() + 100;
   }
   draw() {
@@ -57,7 +57,7 @@ for (let i = 0; i < 200; i++) {
 }
 function animate() {
   requestAnimationFrame(animate);
-  c.fillStyle='rgba(255,255,255,0.05)'
+  c.fillStyle='rgba(0,0,0,0.05)'
   c.fillRect(0, 0, w, h);
   particles.forEach((particle) => {
     particle.update();
