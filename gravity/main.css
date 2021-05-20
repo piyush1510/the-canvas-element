@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(37, 37, 37);
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#refresh-btn{
+    position: relative;
+    top:-10vh;
+    padding: 10px;
+    background-color: transparent;
+    color: crimson;
+    border: 2px solid crimson;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: 0.5s background-color,0.5s color;
+    -webkit-transition: 0.5s background-color,0.5s color;
+    -moz-transition: 0.5s background-color,0.5s color;
+    -ms-transition: 0.5s background-color,0.5s color;
+    -o-transition: 0.5s background-color,0.5s color;
+}
+#refresh-btn:hover{
+    background-color: crimson;
+    color: white;
+}
